@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import NavbarComponent from "./Component/NavbarComponent";
+import MeteocittàComponent from "./Component/MeteocittàComponent";
+import RicercaComponent from "./Component/RicercaComponent";
+import FooterImg from "./Component/FooterImg";
+import Dettagli from "./Component/Dettagli";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/myCss.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="Blue vh-100">
+        <NavbarComponent />
+        <RicercaComponent />
+        <div className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <MeteocittàComponent città="Milano" />{" "}
+                  <MeteocittàComponent città="Rome" />{" "}
+                  <MeteocittàComponent città="Napoli" />
+                  <MeteocittàComponent città="Crotone" />
+                  <MeteocittàComponent città="Barcellona" />
+                </>
+              }
+            />
+            <Route path="/dettagli/:nomeCitta" element={<Dettagli />} />
+          </Routes>
+
+          <FooterImg />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

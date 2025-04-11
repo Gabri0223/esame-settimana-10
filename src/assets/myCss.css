@@ -1,0 +1,83 @@
+.Blue{
+    background-color: #283B58;
+}
+
+.lessBlue{
+    background-color: #101B39 ;
+}
+
+.contenitore{
+    width: 20%;
+}
+
+.contenitore-icone {
+    border: 1px solid rgb(62, 111, 234);
+    color: white;              
+    width: 30px;               
+    height: 30px;              
+    border-radius: 50%;        
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    padding: 0;                
+  }
+
+  .info{
+    background-color: #147CB3;
+  }
+
+  .moreBlue{color: #00193E}
+
+
+  .dettagliColor{
+    background-color: #436888;
+  }
+
+.container-img{
+    width: 30%;
+}
+
+  @media (min-width: 768px) {
+    .responsive-text {
+      font-size: 16px !important;  
+    }
+  }
+  
+  
+  @media (min-width: 1024px) {
+    .responsive-text {
+      font-size: 18px !important;  
+    }
+  }
+  
+ 
+  @media (min-width: 1200px) {
+    .responsive-text {
+      font-size: 20px !important;  
+    }
+  }
+
+  @media (min-width: 768px) {
+    .img-responsive {
+      width: 80%;     
+    }
+  }
+  
+ 
+  @media (min-width: 1024px) {
+    .img-responsive {
+      width: 60%;     
+    }
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .img-responsive {
+      width: 50%;     
+    }
+  }
+  @media (max-width: 768px) {
+    .Blue2 {
+      background-color: #283B58; 
+    }
+  }
