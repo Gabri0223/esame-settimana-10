@@ -81,3 +81,10 @@
       background-color: #283B58; 
     }
   }
+
+  @media (max-width: 768px) {
+    .myBorder {
+      border-right: none !important; 
+      border-bottom: 2px solid white; 
+    }
+  }

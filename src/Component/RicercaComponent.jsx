@@ -5,12 +5,8 @@ const RicercaComponent = function () {
   return (
     <div className="d-flex flex-row mb-4 d-md-none">
       <Form className="mx-5 d-flex">
-        <Form.Control
-          type="text"
-          placeholder="Cerca una località"
-          defaultValue="Otto"
-        />
-        ;<Button>Invio</Button>
+        <Form.Control type="text" placeholder="Cerca una località" />;
+        <Button>Invio</Button>
       </Form>
     </div>
   );
